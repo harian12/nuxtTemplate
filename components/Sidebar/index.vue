@@ -384,8 +384,6 @@ onMounted(() => {
     // @ts-ignore
     initFlowbite();
   });
-
-  console.log(route);
 });
 </script>
 <style lang=""></style>
