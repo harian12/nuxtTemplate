@@ -54,7 +54,7 @@ const menu: Array<typeMenu> = [
         icon: "solar:card-bold",
       },
       { name: "tooltip", to: "/admin/components/tooltip", icon: "bi:kanban-fill" },
-      { name: "calender", to: "/admin/components/calender", icon: "uis:calender" },
+      { name: "modal", to: "/admin/components/modal", icon: "carbon:popup" },
     ],
   },
 ];
