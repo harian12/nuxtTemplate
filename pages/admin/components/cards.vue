@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 gap-3">
+  <div class="grid grid-cols-2 gap-6">
     <ThemeCardDefault class="col-span-2">
       <template #header> Card Default </template>
       <template #body>

@@ -17,7 +17,6 @@ onMounted(() => {
     // @ts-ignore
     initFlowbite();
   });
-
 });
 
 const menu: Array<typeMenu> = [
@@ -44,11 +43,19 @@ const menu: Array<typeMenu> = [
     ],
   },
   {
-    name: "cards",
-    to: "/admin/cards",
-    dropdown: false,
-    icon: "solar:card-bold",
-    subMenu: [],
+    name: "components",
+    to: "/admin/components",
+    dropdown: true,
+    icon: "ri:pages-fill",
+    subMenu: [
+      {
+        name: "cards",
+        to: "/admin/components/cards",
+        icon: "solar:card-bold",
+      },
+      { name: "tooltip", to: "/admin/components/tooltip", icon: "bi:kanban-fill" },
+      { name: "calender", to: "/admin/components/calender", icon: "uis:calender" },
+    ],
   },
 ];
 </script>

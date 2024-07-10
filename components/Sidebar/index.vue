@@ -88,9 +88,17 @@
             <ul
               v-if="menu.dropdown"
               :id="'dropdown-pages' + i"
-              class="hidden py-2 space-y-2"
+              class="py-2 space-y-2"
+              :class="{
+                '!block': route.path.includes(menu.to),
+                hidden: !route.path.includes(menu.to),
+              }"
             >
-              <li v-for="(submenu, k) in menu.subMenu" :key="k" class="relative">
+              <li
+                v-for="(submenu, k) in menu.subMenu"
+                :key="k"
+                class="relative"
+              >
                 <NuxtLink
                   :to="submenu.to"
                   class="flex items-center p-2 capitalize ml-8 w-full text-base font-normal text-white rounded-s-lg transition duration-75 group dark:text-white dark:hover:bg-gray-700"
@@ -369,13 +377,15 @@ const props = defineProps({
   },
 });
 
+const route = useRoute();
+
 onMounted(() => {
   useFlowbite(() => {
     // @ts-ignore
     initFlowbite();
   });
 
-  console.log(props.menu);
+  console.log(route);
 });
 </script>
 <style lang=""></style>
