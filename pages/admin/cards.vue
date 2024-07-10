@@ -38,25 +38,25 @@
       </template>
     </ThemeCardWithNavTabs>
     <ThemeCardTabFullWidth :nav="navTabsFull">
-      <template #about>
+      <template #statistics>
         <div>
-          About Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          statistics Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           Debitis velit ratione beatae laboriosam tempora nesciunt quo veritatis
           cum, vero ullam recusandae nam, atque tenetur ex voluptatibus porro in
           repudiandae sunt!
         </div>
       </template>
-      <template #service>
+      <template #services>
         <div>
-          Service Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          services Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           Debitis velit ratione beatae laboriosam tempora nesciunt quo veritatis
           cum, vero ullam recusandae nam, atque tenetur ex voluptatibus porro in
           repudiandae sunt!
         </div>
       </template>
-      <template #facts>
+      <template #FAQ>
         <div>
-          Facts Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          FAQ Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           Debitis velit ratione beatae laboriosam tempora nesciunt quo veritatis
           cum, vero ullam recusandae nam, atque tenetur ex voluptatibus porro in
           repudiandae sunt!
