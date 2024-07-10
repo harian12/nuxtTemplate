@@ -369,6 +369,13 @@ const props = defineProps({
   },
 });
 
+onMounted(() => {
+  useFlowbite(() => {
+    // @ts-ignore
+    initFlowbite();
+  });
 
+  console.log(props.menu);
+});
 </script>
 <style lang=""></style>
