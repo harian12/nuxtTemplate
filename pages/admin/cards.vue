@@ -1,6 +1,6 @@
 <template>
-  <div class="grid gap-3">
-    <ThemeCardDefault>
+  <div class="grid grid-cols-2 gap-3">
+    <ThemeCardDefault class="col-span-2">
       <template #header> Card Default </template>
       <template #body>
         <div>
@@ -11,58 +11,64 @@
         </div>
       </template>
     </ThemeCardDefault>
-    <ThemeCardWithNavTabs :nav="navTabs">
-      <template #about>
-        <div>
-          About Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Debitis velit ratione beatae laboriosam tempora nesciunt quo veritatis
-          cum, vero ullam recusandae nam, atque tenetur ex voluptatibus porro in
-          repudiandae sunt!
-        </div>
-      </template>
-      <template #service>
-        <div>
-          Service Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Debitis velit ratione beatae laboriosam tempora nesciunt quo veritatis
-          cum, vero ullam recusandae nam, atque tenetur ex voluptatibus porro in
-          repudiandae sunt!
-        </div>
-      </template>
-      <template #facts>
-        <div>
-          Facts Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Debitis velit ratione beatae laboriosam tempora nesciunt quo veritatis
-          cum, vero ullam recusandae nam, atque tenetur ex voluptatibus porro in
-          repudiandae sunt!
-        </div>
-      </template>
-    </ThemeCardWithNavTabs>
-    <ThemeCardTabFullWidth :nav="navTabsFull">
-      <template #statistics>
-        <div>
-          statistics Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Debitis velit ratione beatae laboriosam tempora nesciunt quo veritatis
-          cum, vero ullam recusandae nam, atque tenetur ex voluptatibus porro in
-          repudiandae sunt!
-        </div>
-      </template>
-      <template #services>
-        <div>
-          services Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Debitis velit ratione beatae laboriosam tempora nesciunt quo veritatis
-          cum, vero ullam recusandae nam, atque tenetur ex voluptatibus porro in
-          repudiandae sunt!
-        </div>
-      </template>
-      <template #FAQ>
-        <div>
-          FAQ Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Debitis velit ratione beatae laboriosam tempora nesciunt quo veritatis
-          cum, vero ullam recusandae nam, atque tenetur ex voluptatibus porro in
-          repudiandae sunt!
-        </div>
-      </template>
-    </ThemeCardTabFullWidth>
+    <div>
+      <h5 class="text-xl font-bold mb-1">Card With Tabs</h5>
+      <ThemeCardWithNavTabs :nav="navTabs">
+        <template #about>
+          <div>
+            About Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Debitis velit ratione beatae laboriosam tempora nesciunt quo
+            veritatis cum, vero ullam recusandae nam, atque tenetur ex
+            voluptatibus porro in repudiandae sunt!
+          </div>
+        </template>
+        <template #service>
+          <div>
+            Service Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Debitis velit ratione beatae laboriosam tempora nesciunt quo
+            veritatis cum, vero ullam recusandae nam, atque tenetur ex
+            voluptatibus porro in repudiandae sunt!
+          </div>
+        </template>
+        <template #facts>
+          <div>
+            Facts Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Debitis velit ratione beatae laboriosam tempora nesciunt quo
+            veritatis cum, vero ullam recusandae nam, atque tenetur ex
+            voluptatibus porro in repudiandae sunt!
+          </div>
+        </template>
+      </ThemeCardWithNavTabs>
+    </div>
+    <div>
+      <h5 class="text-xl font-bold mb-1">Card Full With Tabs</h5>
+      <ThemeCardTabFullWidth :nav="navTabsFull">
+        <template #statistics>
+          <div>
+            statistics Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Debitis velit ratione beatae laboriosam tempora nesciunt quo
+            veritatis cum, vero ullam recusandae nam, atque tenetur ex
+            voluptatibus porro in repudiandae sunt!
+          </div>
+        </template>
+        <template #services>
+          <div>
+            services Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Debitis velit ratione beatae laboriosam tempora nesciunt quo
+            veritatis cum, vero ullam recusandae nam, atque tenetur ex
+            voluptatibus porro in repudiandae sunt!
+          </div>
+        </template>
+        <template #FAQ>
+          <div>
+            FAQ Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Debitis velit ratione beatae laboriosam tempora nesciunt quo
+            veritatis cum, vero ullam recusandae nam, atque tenetur ex
+            voluptatibus porro in repudiandae sunt!
+          </div>
+        </template>
+      </ThemeCardTabFullWidth>
+    </div>
   </div>
 </template>
 <script setup lang="ts">

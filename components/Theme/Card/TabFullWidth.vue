@@ -40,7 +40,7 @@
       <div
         v-for="(tab, i) in props.nav"
         :key="i"
-        class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
+        class="hidden p-4 bg-white rounded-lg dark:bg-gray-800"
         :id="tab"
         role="tabpanel"
         :aria-labelledby="tab + '-tab'"
