@@ -1,15 +1,13 @@
 <template>
     <div>
-        Admin
+        Setting
     </div>
 </template>
 <script setup lang="ts">
-
 definePageMeta({
     layout:'admin'
 })
-
 </script>
-<style lang="">
+<style>
     
 </style>
