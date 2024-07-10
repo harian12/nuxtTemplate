@@ -40,7 +40,7 @@
 <script setup lang="ts">
 // @ts-ignore
 const props = defineProps({
-  nav: { type: Array<string>, default: [], require: true },
+  nav: { type: Array<string>, default: [], required: true },
 });
 
 const id = ref<string>("");
