@@ -51,24 +51,23 @@
             <NuxtLink
               v-if="!menu.dropdown"
               :to="menu.to"
-              class="flex items-center p-2 text-base font-normal text-white rounded-s-lg dark:text-white dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-base font-medium hover:font-bold font-normal text-white rounded-s-lg dark:text-white dark:hover:bg-gray-700 group"
             >
               <b></b>
               <b></b>
               <Icon :name="menu.icon" class="w-7 h-7" />
-
-              <span class="ml-3 capitalize font-medium">{{ menu.name }}</span>
+              <span class="ml-3 capitalize">{{ menu.name }}</span>
             </NuxtLink>
             <button
               v-else
               type="button"
-              class="flex items-center p-2 w-full text-base font-normal text-white rounded-s-lg transition duration-75 group dark:text-white dark:hover:bg-gray-700"
+              class="flex items-center p-2 w-full text-base font-medium hover:font-bold text-white rounded-s-lg transition duration-75 group dark:text-white dark:hover:bg-gray-700"
               :aria-controls="'dropdown-pages-' + i"
               :data-collapse-toggle="'dropdown-pages' + i"
             >
               <Icon :name="menu.icon" class="w-7 h-7" />
               <span
-                class="flex-1 ml-3 text-left whitespace-nowrap capitalize font-medium"
+                class="flex-1 ml-3 text-left whitespace-nowrap capitalize"
                 >{{ menu.name }}</span
               >
               <svg
@@ -88,11 +87,7 @@
             <ul
               v-if="menu.dropdown"
               :id="'dropdown-pages' + i"
-              class="py-2 space-y-2"
-              :class="{
-                '!block': route.path.includes(menu.to),
-                hidden: !route.path.includes(menu.to),
-              }"
+              class="py-2 space-y-2 hidden"
             >
               <li
                 v-for="(submenu, k) in menu.subMenu"
@@ -101,12 +96,12 @@
               >
                 <NuxtLink
                   :to="submenu.to"
-                  class="flex items-center p-2 capitalize ml-8 w-full text-base font-normal text-white rounded-s-lg transition duration-75 group dark:text-white dark:hover:bg-gray-700"
+                  class="flex items-center p-2 capitalize ml-8 w-full text-base font-medium hover:font-bold text-white rounded-s-lg transition duration-75 group dark:text-white dark:hover:bg-gray-700"
                 >
                   <b></b>
                   <b></b>
                   <Icon :name="submenu.icon" class="w-7 h-7" />
-                  <span class="ml-3 font-medium">{{ submenu.name }}</span>
+                  <span class="ml-3">{{ submenu.name }}</span>
                 </NuxtLink>
               </li>
             </ul>

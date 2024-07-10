@@ -3,29 +3,20 @@
 @tailwind utilities;
 
 .router-link-active {
-  @apply !bg-white text-cyan-500 ;
+  @apply !bg-white text-cyan-500 transition-transform duration-300 ;
 }
 
 
 .router-link-active b:nth-child(1){
-    @apply content-[''] absolute -top-4 right-0 bg-white w-4 h-4        
+    @apply content-[''] absolute -top-4 right-0 bg-white w-6 h-full        
 }
 .router-link-active b:nth-child(1)::before{
-    @apply content-[''] absolute top-0 right-0 bg-cyan-500 w-4 h-4 rounded-ee-xl        
+    @apply content-[''] absolute top-0 right-0 bg-cyan-500 w-6 h-4 rounded-ee-3xl        
 }
 .router-link-active b:nth-child(2){
-    @apply content-[''] absolute -bottom-4 right-0 bg-white w-4 h-4        
+    @apply content-[''] absolute -bottom-4 right-0 bg-white w-6 h-full        
 }
 .router-link-active b:nth-child(2)::before{
-    @apply content-[''] absolute bottom-0 right-0 bg-cyan-500 w-4 h-4 rounded-se-xl        
+    @apply content-[''] absolute bottom-0 right-0 bg-cyan-500 w-6 h-4 rounded-se-3xl        
 }
-/* .router-link-active::before{
-    content: '';
-    position: absolute;
-    top: -20px;
-    right: 0px;
-    background-color: red;
-    width: 20px;
-    height: 20px;
-    
-} */
+
