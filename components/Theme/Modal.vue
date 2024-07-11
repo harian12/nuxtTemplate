@@ -83,7 +83,6 @@ const emit = defineEmits(["close"]);
 
 const closeModal = () => {
   emit("close");
-  console.log("jalan");
 };
 </script>
 <style></style>

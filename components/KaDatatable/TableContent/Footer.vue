@@ -76,6 +76,8 @@
   </div>
 </template>
 <script setup lang="ts">
+
+// @ts-ignore
 const props = defineProps({
   maxVisibleButtons: {
     type: Number,
@@ -100,13 +102,8 @@ const props = defineProps({
   },
 });
 
+// @ts-ignore
 const emits = defineEmits(["page-change"]);
-
-onMounted(() => {
-  console.log("totoal1: ", props.totalPages);
-  console.log("totoal2: ", props.total);
-  console.log("currentP: ", props.currentPage);
-});
 
 const startPage = computed(() => {
   if (

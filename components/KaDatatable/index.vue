@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-x-auto shadow-md sm:rounded-lg p-4">
+  <div class="relative overflow-x-auto p-1">
     <!-- eslint-disable -->
     <KaDatatableTableContentHead
       v-model:itemsPerPage="itemsCountInTable"
