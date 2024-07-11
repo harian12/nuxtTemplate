@@ -4,6 +4,7 @@
     <KaDatatableTableContentHead
       v-model:itemsPerPage="itemsCountInTable"
       :items-per-page-dropdown-enabled="itemsPerPageDropdownEnabled"
+      @search="searchData"
     />
     <table
       class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
@@ -43,7 +44,7 @@
       :totalPages="pageCount"
       :perPage="itemsPerPage"
       :currentPage="page"
-      :total="totalItems"
+      :total="totalItems ? totalItems : 0"
       @page-change="pageChange"
     />
   </div>
@@ -83,6 +84,7 @@ const props = defineProps({
 const emit = defineEmits([
   "page-change",
   "on-sort",
+  "on-search",
   "on-items-select",
   "on-items-per-page-change",
   "on-item-click",
@@ -187,7 +189,9 @@ const totalItems = computed(() => {
 });
 
 const pageCount = computed(() => {
-  return Math.ceil(totalItems.value / itemsCountInTable.value);
+  return Math.ceil(
+    totalItems.value ? totalItems.value : 0 / itemsCountInTable.value
+  );
 });
 
 /* eslint-disable */
@@ -211,6 +215,10 @@ const onItemClick = (item: any) => {
 //eslint-disable-next-line
 const onItemSelect = (selectedItems: any) => {
   emit("on-items-select", selectedItems);
+};
+
+const searchData = (data: string) => {
+  emit("on-search", data);
 };
 </script>
 

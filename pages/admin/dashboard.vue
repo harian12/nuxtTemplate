@@ -15,6 +15,7 @@
           :checkboxEnabled="true"
           @on-item-click="onItemClick"
           @on-items-select="onItemSelect"
+          @on-search="onSearch"
         >
           <template v-slot:name="{ row: item }">
             {{ item.name }}
@@ -96,6 +97,10 @@ const onItemSelect = (item: any) => {
 
 const changePage = (page: number) => {
   currentPage.value = page;
+};
+
+const onSearch = (value: string) => {
+  console.log("search: ",value)
 };
 </script>
 <style></style>

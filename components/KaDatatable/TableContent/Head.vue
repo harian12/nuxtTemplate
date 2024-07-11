@@ -21,9 +21,11 @@
       </div>
       <input
         type="text"
-        id="table-search-users"
+        id="table-search"
+        v-model="valueSearch"
         class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-transparent focus:border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-transparent dark:focus:border-blue-500"
         placeholder="Search"
+        @change="search"
       />
     </div>
   </div>
@@ -40,10 +42,10 @@ const props = defineProps({
 });
 
 // @ts-ignore
-const emit = defineEmits(["update:itemsPerPage"]);
+const emit = defineEmits(["update:itemsPerPage", "search"]);
 
 const inputItemsPerPage = ref(10);
-
+const valueSearch = ref<string>("");
 onMounted(() => {
   inputItemsPerPage.value = props.itemsPerPage;
 });
@@ -57,5 +59,9 @@ const itemsCountInTable: WritableComputedRef<number> = computed({
     emit("update:itemsPerPage", value);
   },
 });
+
+const search = () => {
+  emit("search", valueSearch.value);
+};
 </script>
 <style></style>
